@@ -1,0 +1,68 @@
+.back-dict{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 2%;
+    &__input{
+        display: flex;
+
+        &__card{
+            display: flex;
+            align-items: center;
+            margin: 4% 0;
+            border-left: 4px solid #2862ffc7;
+            box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+            min-width: auto;
+            justify-content: center;
+            background-color: #ffffff;
+            border-radius: 0.3rem !important;
+            mat-form-field{
+                cursor: pointer;
+                input{
+                    cursor: pointer;
+                }
+                font-size: 12.6px;
+                margin-top: 14px !important; margin-bottom: -3px !important;
+                width: 130px;
+            }
+            svg{
+                width: 34px;
+                margin:14px;
+            }
+            .but{
+                background-color: #2862ff;
+                box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px rgb(0 0 0 / 14%), 0 -2px 5px rgb(0 0 0 / 12%);
+                display: flex !important;
+                align-items: center;
+                color: #ffffffe8;
+                font-weight: 500;
+                letter-spacing: 0.4px;
+                margin-left: 15px;
+                margin-right: 15px;
+                $a:13; $b:12; $c: $a - $b; $d: $c + $c * 0.7;
+                $a2:32; $b2:28; $c2: $a2 - $b2; $d2: $c2 + $c2 * 0.7;
+                @media (min-width:767px) {
+                    font-size: calc(#{$b + px} + #{$c} * (100vw / 1920)) !important;
+                    height: calc(#{$b2 + px} + #{$c2} * (100vw / 1920)) !important;
+                }
+                @media (max-width:767px) {
+                    font-size: calc(#{$b + px} + #{$d} * ((100vw - 320px) / 1920)) !important;
+                    height: calc(#{$b2 + px} + #{$d2} * ((100vw - 320px) / 1920)) !important;
+                }
+            }
+        }
+    }
+    &__table{
+        display: flex;
+        padding: 0 30px;
+        padding-top: 14px;
+        div{
+            width: 100%;
+            min-width: 33em;
+            margin-right: 3.2%;
+            table{
+                width: 100%;
+            }
+        }
+    }
+}

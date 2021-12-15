@@ -1,8 +1,8 @@
 <div class="home__page">
     <div>
         <div class="home__page__dashboard">
-            <div class="home__page__dashboard__head">Welcome to Dashboard</div>
-            <div class="home__page__dashboard__text">Hello Guest, welcome to Event Metadata System!</div>
+            <div class="home__page__dashboard__head">Event Metadata System</div>
+            <div class="home__page__dashboard__text">The Event Catalogue stores summary event metadata to select necessary events by criteria</div>
         </div>
         <div class="home__page__stats">
             <div class="home__page__stats__block">
@@ -29,8 +29,8 @@
                     <div class="per_number">{{fil.per}}&nbsp;</div>
                 </div>
             </button>
-            <div *ngIf="per" class="home__page__stats__block" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
-                <mat-form-field class="wform" style="margin-bottom: -10%;">
+            <div *ngIf="per" class="home__page__stats__block3" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+                <mat-form-field class="wform" style="margin-bottom: -10%;width: 110px;">
                     <mat-select  placeholder="Period number" [(ngModel)]="fil.per" [ngModelOptions]="{standalone: true}">
                           <mat-option  *ngFor="let per of data;"  [value]="per" (click)="start();">Period {{per}} </mat-option>
                     </mat-select>

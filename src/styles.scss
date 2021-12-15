@@ -196,6 +196,7 @@ footer {
     background: #fff;
     border-top: 1px solid #e5e5e5;
     border-bottom: 3px solid #2862ff;
+    min-height: 48px;
     .mat-icon{
         $a:25; $b:23; $c: $a - $b; $d: $c + $c * 0.7;
         @media (min-width:767px) {
@@ -280,7 +281,7 @@ footer {
     .first{
         display: flex;
         flex-direction: column;
-        width: 18em;
+        width: 19em;
         height: max-content;
         padding-bottom: 34px;
         .form{

@@ -104,6 +104,9 @@ export class HomeComponent{
           spacingBottom: 0,
           spacingLeft: 0,
           spacingRight: 0,
+          style: {
+            fontFamily: 'Arial, Helvetica, Clean, sans-serif'
+          }
         },
         title:{
           text: ''
@@ -122,7 +125,7 @@ export class HomeComponent{
             dataLabels: {
               enabled: true,
               distance: 15,
-              style: { fontSize: 'inherit', fontWeight: "normal" },
+              style: { fontSize: 'inherit', fontWeight: "normal",fontFamily: '\'Lato\', sans-serif', lineHeight: '18px' },
               format: '{point.name}: <i>{point.y} MEvents</i>'
             }
           }

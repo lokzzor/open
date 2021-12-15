@@ -1,17 +1,18 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {storage_name: "data1", file_path: '/tmp/file1', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, track_number: 20},
-  {storage_name: "data1", file_path: '/tmp/file12', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, track_number: 20},
-  {storage_name: "data1", file_path: '/tmp/file12', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, track_number: 20},
-  {storage_name: "data1", file_path: '/tmp/file12', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, track_number: 20},
-  {storage_name: "data1", file_path: '/tmp/file12', event_number: 22, software_version: 19.1, period_number: 7, run_number: 5000, track_number: 20},
-  {storage_name: "data1", file_path: '/tmp/file12', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, track_number: 20},
-  {storage_name: "data1", file_path: '/tmp/file12', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, track_number: 20},
-  {storage_name: "data1", file_path: '/tmp/file13', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, track_number: 20},  {storage_name: "data1", file_path: '/tmp/file12', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, track_number: 20},
-  {storage_name: "data1", file_path: '/tmp/file12', event_number: 22, software_version: 19.1, period_number: 7, run_number: 5000, track_number: 20},
-  {storage_name: "data1", file_path: '/tmp/file12', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, track_number: 20},
-  {storage_name: "data1", file_path: '/tmp/file12', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, track_number: 20},
+  {storage_name: "data1", file_path: '/tmp/file1', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, beam: "Kr", target:"Al", energy:"2.2", track_number: 20, input:"0", output:"0"},
+  {storage_name: "data1", file_path: '/tmp/file1', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, beam: "Kr", target:"Al", energy:"2.2", track_number: 20, input:"0", output:"0"},
+  {storage_name: "data1", file_path: '/tmp/file1', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, beam: "Kr", target:"Al", energy:"2.2", track_number: 20, input:"0", output:"0"},
+  {storage_name: "data1", file_path: '/tmp/file1', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, beam: "Kr", target:"Al", energy:"2.2", track_number: 20, input:"0", output:"0"},
+  {storage_name: "data1", file_path: '/tmp/file1', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, beam: "Kr", target:"Al", energy:"2.2", track_number: 20, input:"0", output:"0"},
+  {storage_name: "data1", file_path: '/tmp/file1', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, beam: "Kr", target:"Al", energy:"2.2", track_number: 20, input:"0", output:"0"},
+  {storage_name: "data1", file_path: '/tmp/file1', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, beam: "Kr", target:"Al", energy:"2.2", track_number: 20, input:"0", output:"0"},
+  {storage_name: "data1", file_path: '/tmp/file1', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, beam: "Kr", target:"Al", energy:"2.2", track_number: 20, input:"0", output:"0"},
+  {storage_name: "data1", file_path: '/tmp/file1', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, beam: "Kr", target:"Al", energy:"2.2", track_number: 20, input:"0", output:"0"},
+  {storage_name: "data1", file_path: '/tmp/file1', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, beam: "Kr", target:"Al", energy:"2.2", track_number: 20, input:"0", output:"0"},
+  {storage_name: "data1", file_path: '/tmp/file1', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, beam: "Kr", target:"Al", energy:"2.2", track_number: 20, input:"0", output:"0"},
+  {storage_name: "data1", file_path: '/tmp/file1', event_number: 111, software_version: 19.1, period_number: 7, run_number: 5000, beam: "Kr", target:"Al", energy:"2.2", track_number: 20, input:"0", output:"0"},
 ];
 
 @Component({
@@ -19,7 +20,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: './src.component.html'
 })
 export class SrcComponent implements OnInit {
-  displayedColumns: string[] = ['storage_name', 'file_path', 'event_number', 'software_version', 'period_number', 'run_number', 'track_number'];
+  displayedColumns: string[] = ['storage_name', 'file_path', 'event_number', 'software_version', 'period_number', 'run_number','beam','target','energy', 'track_number','input', 'output'];
   dataSource = ELEMENT_DATA;
   length: any; errors: any = ''; errors2: any = 'Event Selector';
   fil: any = { period_number: "", run_number: "", software_version: "", beam: "", target:"",energy:"",total:""};
@@ -64,4 +65,9 @@ export interface PeriodicElement {
   period_number: number;
   run_number: number;
   track_number: number;
+  beam:string;
+  target:string;
+  energy:string;
+  input:string;
+  output:string;
 }

@@ -55,12 +55,12 @@
           matInput [(ngModel)]="fil.total" [ngModelOptions]="{standalone: true}">
       </mat-form-field>
       <mat-form-field appearance="outline">
-        <mat-label>Input File</mat-label>
+        <mat-label>Input Charge</mat-label>
         <input autocomplete="off" onkeypress="return String.fromCharCode(event.charCode).match(/[0-9- ]/g) != null"
           matInput [(ngModel)]="fil.total" [ngModelOptions]="{standalone: true}">
       </mat-form-field>
       <mat-form-field appearance="outline">
-        <mat-label>Output File</mat-label>
+        <mat-label>Output Charge</mat-label>
         <input autocomplete="off" onkeypress="return String.fromCharCode(event.charCode).match(/[0-9- ]/g) != null"
           matInput [(ngModel)]="fil.total" [ngModelOptions]="{standalone: true}">
       </mat-form-field>
@@ -73,7 +73,7 @@
   <div class="second">
     <table mat-table matSort [dataSource]="dataSource" #TableOneSort="matSort" class="mat-elevation-z8">
       <ng-container matColumnDef="storage_name">
-        <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Storage Name </mat-header-cell>
+        <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Storage</mat-header-cell>
         <mat-cell mat-cell *matCellDef="let element">{{ element.storage_name }}</mat-cell>
       </ng-container>
       <ng-container matColumnDef="file_path">
@@ -81,24 +81,44 @@
         <mat-cell mat-cell *matCellDef="let element">{{ element.file_path }}</mat-cell>
       </ng-container>
       <ng-container matColumnDef="event_number">
-        <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Event Number </mat-header-cell>
+        <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Event</mat-header-cell>
         <mat-cell mat-cell *matCellDef="let element">{{ element.event_number }}</mat-cell>
       </ng-container>
       <ng-container matColumnDef="software_version">
-        <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Software Version </mat-header-cell>
+        <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Software Version</mat-header-cell>
         <mat-cell mat-cell *matCellDef="let element">{{ element.software_version }}</mat-cell>
       </ng-container>
       <ng-container matColumnDef="period_number">
-        <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Period Number </mat-header-cell>
+        <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header>Period Number</mat-header-cell>
         <mat-cell mat-cell *matCellDef="let element">{{ element.period_number }}</mat-cell>
       </ng-container>
       <ng-container matColumnDef="run_number">
-        <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Run Number  </mat-header-cell>
+        <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Run</mat-header-cell>
         <mat-cell mat-cell *matCellDef="let element">{{ element.run_number }}</mat-cell>
       </ng-container>
+      <ng-container matColumnDef="beam">
+        <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Beam</mat-header-cell>
+        <mat-cell mat-cell *matCellDef="let element">{{ element.beam }}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="target">
+        <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Target</mat-header-cell>
+        <mat-cell mat-cell *matCellDef="let element">{{ element.target }}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="energy">
+        <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Energy, GeV </mat-header-cell>
+        <mat-cell mat-cell *matCellDef="let element">{{ element.energy }}</mat-cell>
+      </ng-container>
       <ng-container matColumnDef="track_number">
-        <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Track Number </mat-header-cell>
+        <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Track</mat-header-cell>
         <mat-cell mat-cell *matCellDef="let element">{{ element.track_number }}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="input">
+        <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Input Charge</mat-header-cell>
+        <mat-cell mat-cell *matCellDef="let element">{{ element.input }}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="output">
+        <mat-header-cell mat-header-cell *matHeaderCellDef mat-sort-header> Output Charge</mat-header-cell>
+        <mat-cell mat-cell *matCellDef="let element">{{ element.output }}</mat-cell>
       </ng-container>
       <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
       <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>

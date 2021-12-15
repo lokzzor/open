@@ -49,6 +49,20 @@
         .borders:hover{
             box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         }
+        &__block3{
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            border-radius: 0.3rem !important;
+            padding: 1rem !important;
+            margin-left: 20px;
+            min-width: 165px;
+            svg{
+                width: 36px;
+            }
+        }
         &__block2{
             height: 75px;
             display: flex;
@@ -141,7 +155,7 @@
     font-weight: 600;
     color: #5d5e61;
     font-family: "Nanum Gothic", sans-serif;
-    $a:16; $b:14; $c: $a - $b; $d: $c + $c * 0.7;
+    $a:15; $b:13; $c: $a - $b; $d: $c + $c * 0.7;
     @media (min-width:767px) {
         font-size: calc(#{$b + px} + #{$c} * (100vw / 1920)) !important;
     }
